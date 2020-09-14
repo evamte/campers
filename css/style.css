@@ -8,8 +8,58 @@ body {
     box-sizing: border-box;
 }
 
-nav {
-    background-color: beige;
+/* fonts: */
+h1 {
+    font-family: 'Amatic SC';
+    font-size: 2em;
+}
+
+h2 {
+    font-family: 'Amatic SC';
+    font-size: 50%;
+}
+
+h3 {
+    font-family: helvetica;
+    font-size: 1.2em;
+}
+
+p {
+    font-family: helvetica;
+    font-size: 2em;
+}
+
+#header-nav-wrapper {
+
+}
+
+#header-nav-wrapper img {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+#logo {
+    position: absolute;
+    top: 0;
+    color: white;
+    margin-top: -1em;
+    margin-left: 0.5em;
+    font-family: 'Amatic SC', cursive;
+    text-decoration: none;
+    font-size: 2.5em;
+}
+
+header {
+    position: absolute;
+    top: 40%;
+    left: 44%;
+}
+
+.slogan {
+    color: white;
+    display: flex;
+    justify-content: center;
 }
 
 
