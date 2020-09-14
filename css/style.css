@@ -42,8 +42,14 @@ h2 {
 }
 
 h3 {
-    font-family: helvetica;
-    font-size: 1.2em;
+    font-family: 'Amatic SC';
+    font-size: 1.8em;
+}
+
+h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
 }
 
 p {
