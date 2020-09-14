@@ -1,0 +1,58 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    background-color: beige;
+}
+
+
+#active {
+    cursor: pointer;
+    color: white;
+    border-radius: 1000px;
+    background-color: burlywood;
+    width: 2px;
+    height: 20px;
+    padding-right: 80px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#active:hover {
+    color: gray;
+}
+
+div a:link {
+    color: black;
+    font-size: 18px;
+}
+
+div a:visited {
+    color: black;
+}
+
+div a:hover {
+    color: gray;
+}
+
+div a:active {
+    color: white;
+}
+
+
+footer {
+    grid-area: ft;
+    background-color: beige;
+    text-align: left;
+    margin-top: 60px;
+    padding: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
