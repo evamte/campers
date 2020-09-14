@@ -8,6 +8,14 @@ body {
     box-sizing: border-box;
 }
 
+:root {
+    --colour-1: #C85100;
+    --colour-2: #3a5a40;
+    --colour-3: #a3b18a;
+    --colour-4: #f4f3ee;
+    --colour-5: #ffff;
+}
+
 /*GRID*/
 
 main {
@@ -32,26 +40,35 @@ main {
 /*FONTS*/
 h1 {
     font-family: 'Amatic SC';
-    font-size: 250%;
+    font-size: 350%;
     line-height: 0;
 }
 
 h2 {
     font-family: 'Amatic SC';
-    font-size: 2em;
+    font-size: 250%;
 }
 
 h3 {
-    font-family: helvetica;
-    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 1.4em;
 }
 
+h4 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 100;
+    font-size: 1em;
+
+
+}
 p {
     font-family: 'Oswald', sans-serif;
-    font-size: 2em;
+    font-size: 1em;
 }
 
 /*NAV AND HEADER*/
+
 #header-nav-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -64,13 +81,19 @@ p {
     align-self: center;
  }
 
-#header-nav-wrapper img {
+.header-bg {
     width: 100%;
-    height: auto;
+    height: 50em;
+    object-fit: cover;
+
 
 }
 
-#logo {
+header {
+    display: flex;
+    flex-direction: column;
+}
+#logo img{
     position: absolute;
     top: 0;
     max-width: 15vw;
@@ -81,45 +104,47 @@ p {
 
 .slogan {
     color: white;
-    display: flex;
-    justify-content: center;
-    line-height: 0;
 }
 
-button .explore {
-    padding: 0.5em;
-    padding-left: 2em;
-    padding-right: 2em;
-    font-family: 'Oswald', sans-serif;
-    border-radius: 1em;
-    font-size: 1em;
+/*BUTTON STYLING*/
+
+.button-1 {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+    margin: 0 3rem 0 3em;
+    border-radius: 1.5rem;
+    color: white;
     background-color: #C85100;
     border: none;
-    color: white;
+    font-size: 1.2em;
+    font-family: 'Oswald', sans-serif;
 }
 
-
-button:link {
-    color: black;
+.button-1:hover {
+    padding-top: 0.9rem;
+    padding-bottom: 1rem;
+    background-color: whitesmoke;
+    border: var(--colour-1) 0.2em solid ;
+    color: var(--colour-1);
+    cursor: pointer;
 }
 
-button:visited {
-    color: black;
+.button-2 {
+    font-family: 'Amatic SC';
+    font-size: 1.8em;
+    background: none;
+    border: none;
+    color: var(--colour-2);
 }
 
-button:hover {
-    background-color: white;
-    border: #C85100 0.1em solid ;
-    color: #C85100;
-
+.button-2:hover{
+    color: var(--colour-3);
+    cursor: pointer;
 }
 
 button:active {
-    color: white;
+    text-decoration: none;
 }
-
-
-
 
 /*FOOTER*/
 
