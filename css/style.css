@@ -8,7 +8,28 @@ body {
     box-sizing: border-box;
 }
 
-/* fonts: */
+/*GRID*/
+
+main  {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    grid-gap: 4vw;
+    margin: 2vw;
+    padding: 2vw;
+}
+
+.product {
+    position: relative;
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2vw;
+    border-radius: 1.5rem;
+    text-align: center;
+}
+
+/*FONTS*/
 h1 {
     font-family: 'Amatic SC';
     font-size: 250%;
@@ -29,6 +50,8 @@ p {
     font-family: 'Oswald', sans-serif;
     font-size: 2em;
 }
+
+/*NAV AND HEADER*/
 #header-nav-wrapper {
     display: grid;
     grid-template-columns: 1fr;
@@ -98,14 +121,9 @@ button:active {
 
 
 
-
+/*FOOTER*/
 
 footer {
-    grid-area: ft;
     background-color: beige;
-    text-align: left;
-    margin-top: 60px;
-    padding: 20px;
-    font-family: 'Open Sans', sans-serif;
-    font-size: 12px;
+    height: 2vw;
 }
