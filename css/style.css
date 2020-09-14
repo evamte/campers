@@ -50,6 +50,8 @@ p {
 #logo {
     position: absolute;
     top: 0;
+    max-width: 15vw;
+    padding: 1.5vw;
     color: white;
     text-decoration: none;
 }
