@@ -11,12 +11,13 @@ body {
 /* fonts: */
 h1 {
     font-family: 'Amatic SC';
-    font-size: 2em;
+    font-size: 250%;
+    line-height: 0;
 }
 
 h2 {
     font-family: 'Amatic SC';
-    font-size: 50%;
+    font-size: 2em;
 }
 
 h3 {
@@ -28,71 +29,57 @@ p {
     font-family: helvetica;
     font-size: 2em;
 }
-
 #header-nav-wrapper {
-
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100%;
 }
+#header-nav-wrapper img, #header-nav-wrapper header {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: center;
+    align-self: center;
+ }
 
 #header-nav-wrapper img {
     width: 100%;
     height: auto;
-    position: relative;
+
 }
 
 #logo {
     position: absolute;
     top: 0;
     color: white;
-    margin-top: -1em;
-    margin-left: 0.5em;
-    font-family: 'Amatic SC', cursive;
     text-decoration: none;
-    font-size: 2.5em;
-}
-
-header {
-    position: absolute;
-    top: 40%;
-    left: 44%;
 }
 
 .slogan {
     color: white;
     display: flex;
     justify-content: center;
+    line-height: 0;
+}
+
+button {
+    padding: 0.5em;
+    font-family: helvetica;
 }
 
 
-#active {
-    cursor: pointer;
-    color: white;
-    border-radius: 1000px;
-    background-color: burlywood;
-    width: 2px;
-    height: 20px;
-    padding-right: 80px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-#active:hover {
-    color: gray;
-}
-
-div a:link {
-    color: black;
-    font-size: 18px;
-}
-
-div a:visited {
+button:link {
     color: black;
 }
 
-div a:hover {
+button:visited {
+    color: black;
+}
+
+button:hover {
     color: gray;
 }
 
-div a:active {
+button:active {
     color: white;
 }
 
