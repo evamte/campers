@@ -26,7 +26,7 @@ h3 {
 }
 
 p {
-    font-family: helvetica;
+    font-family: 'Oswald', sans-serif;
     font-size: 2em;
 }
 #header-nav-wrapper {
@@ -63,7 +63,14 @@ p {
 
 button {
     padding: 0.5em;
-    font-family: helvetica;
+    padding-left: 2em;
+    padding-right: 2em;
+    font-family: 'Oswald', sans-serif;
+    border-radius: 1em;
+    font-size: 1em;
+    background-color: #C85100;
+    border: none;
+    color: white;
 }
 
 
@@ -76,13 +83,57 @@ button:visited {
 }
 
 button:hover {
-    color: gray;
+    background-color: white;
+    border: #C85100 0.1em solid ;
+    color: #C85100;
+
 }
 
 button:active {
     color: white;
 }
 
+
+.product_img {
+    border-radius: 10px;
+    background-size: 100%;
+}
+
+.productlist > section {
+    display: grid;
+    max-width: 1200px;
+    margin: auto;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 10px;
+}
+
+.product {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: lightgoldenrodyellow;
+}
+
+.productbody {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    grid-template-columns: 1 / 1;
+    justify-content: center;
+    padding: 10px;
+}
+
+main {
+    max-width: none;
+    margin: 0;
+}
+
+article {
+    display: grid;
+    flex-flow: column;
+    margin: 30px;
+    border-radius: 20px;
+}
 
 footer {
     grid-area: ft;
