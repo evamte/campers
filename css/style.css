@@ -18,7 +18,7 @@ body {
 
 /*GRID*/
 
-main {
+main > section {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     grid-gap: 4vw;
@@ -26,6 +26,9 @@ main {
     padding: 2vw;
 }
 
+.productlist  h2 {
+    grid-column: 1/-1;
+}
 .product {
     position: relative;
     background-color: whitesmoke;
@@ -166,7 +169,4 @@ footer {
 
 
 }
-
-
 }
-
