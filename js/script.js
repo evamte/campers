@@ -59,13 +59,14 @@ function showData(singleRowData) {
     console.log("singleRowData - console");
     console.log(singleRowData.gsx$name.$t);
 
-<<<<<<< HEAD
-  const template = document.querySelector("template").content;
-  const clone = template.cloneNode(true);
-  const h3 = clone.querySelector("h3");
-  h3.textContent = singleRowData.gsx$name.$t;
-  const h4 = clone.querySelector("h4");
-  h4.textContent = singleRowData.gsx$address.$t;
+    const template = document.querySelector("template").content;
+    const clone = template.cloneNode(true);
+    const h3 = clone.querySelector("h3");
+    h3.textContent = singleRowData.gsx$name.$t;
+    const h4 = clone.querySelector("h4");
+    h4.textContent = singleRowData.gsx$address.$t;
+
+
     const img = clone.querySelector(".product_img");
     img.setAttribute("src", `http://emproductions.dk/imgs/image/${singleRowData.gsx$image.$t}.jpg`);
 
@@ -93,17 +94,6 @@ function showData(singleRowData) {
        console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
     }
 
-  //document.querySelector("main").appendChild(clone);
-  document
-    .querySelector(`section#${singleRowData.gsx$region.$t}`)
-    .appendChild(clone);
-=======
-    const template = document.querySelector("template").content;
-    const clone = template.cloneNode(true);
-    const h3 = clone.querySelector("h3");
-    h3.textContent = singleRowData.gsx$name.$t;
-    const h4 = clone.querySelector("h4");
-    h4.textContent = singleRowData.gsx$address.$t;
 
     //adding click event
 
@@ -129,7 +119,6 @@ function showDetails(data) {
     modal.querySelector(".modal-activities").textContent = "ACTIVITIES: " + data.gsx$activities.$t;
     modal.querySelector(".modal-price").textContent = "FEE: " + data.gsx$price.$t + " DKK";
     modal.classList.remove("hide");
->>>>>>> origin/master
 }
 
 modal.addEventListener("click", () => {
