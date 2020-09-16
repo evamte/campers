@@ -82,17 +82,19 @@ function showData(singleRowData) {
        console.log("price-class"); clone.querySelector(".price-class").classList.remove("hidden");
     }
 
-    if (singleRowData.gsx$caravan.$t) {
-       console.log("caravan"); clone.querySelector(".caravan").classList.remove("hidden");
-    }
+    // ACCOMMODATION ICONS
 
-    if (singleRowData.gsx$tent.$t) {
-       console.log("tent"); clone.querySelector(".tent").classList.remove("hidden");
-    }
+    //if (singleRowData.gsx$caravan.$t) {
+       //console.log("caravan"); clone.querySelector(".caravan").classList.remove("hidden");
+    //}
 
-    if (singleRowData.gsx$cabin.$t) {
-       console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
-    }
+    //if (singleRowData.gsx$tent.$t) {
+       //console.log("tent"); clone.querySelector(".tent").classList.remove("hidden");
+    //}
+
+    //if (singleRowData.gsx$cabin.$t) {
+       //console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
+    //}
 
 
     //adding click event
