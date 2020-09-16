@@ -1,3 +1,11 @@
+/*TO DO:
+- Social Media Icons, either in footer or header
+- Search icon
+- filters
+- price classes
+- for Jo: Campervan icon to show whether camps allow campervans
+*/
+
 /*IMPORT FONTS*/
 
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Oswald:wght@200&display=swap');
@@ -37,6 +45,7 @@ main > section {
 .product {
     position: relative;
     background-color: whitesmoke;
+    box-shadow: 0 0.1vw 1vw lightgrey;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -215,7 +224,7 @@ button:active {
 
 /*RENTALS*/
 
-.accommodation {
+/*.accommodation {
     display: flex;
     justify-content: space-around;
     align-self: center;
@@ -226,7 +235,7 @@ button:active {
     max-width: 1.8em;
     height: auto;
     display: inline-flex;
-}
+}*/
 
 /*ICONS*/
 .icons img {

@@ -78,9 +78,6 @@ function showData(singleRowData) {
        console.log("forest"); clone.querySelector(".forest").classList.remove("hidden");
     }
 
-     if (singleRowData.gsx$priceclass.$t) {
-       console.log("price-class"); clone.querySelector(".price-class").classList.remove("hidden");
-    }
 
     // ACCOMMODATION ICONS
 
@@ -119,7 +116,7 @@ function showDetails(data) {
     modal.querySelector(".modal-region").textContent = data.gsx$region.$t;
     modal.querySelector(".modal-description").textContent = data.gsx$text.$t;
     modal.querySelector(".modal-activities").textContent = "ACTIVITIES: " + data.gsx$activities.$t;
-    modal.querySelector(".modal-price").textContent = "FEE: " + data.gsx$price.$t + " DKK";
+    modal.querySelector(".modal-price").textContent = "FEE (p.p/ per night: " + data.gsx$price.$t + " DKK";
     modal.classList.remove("hide");
 }
 
