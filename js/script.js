@@ -65,18 +65,17 @@ function showData(singleRowData) {
     h3.textContent = singleRowData.gsx$name.$t;
     const h4 = clone.querySelector("h4");
     h4.textContent = singleRowData.gsx$address.$t;
+
+    //adding click event
+
+    clone.querySelector("button").addEventListener("click", () => {
+        showDetails(singleRowData);
+    });
+
     //document.querySelector("main").appendChild(clone);
     document
         .querySelector(`section#${singleRowData.gsx$region.$t}`)
         .appendChild(clone);
-
-//adding click event
-
-    clone.querySelector("button").addEventListener("click", () => {
-        fetch(link + data.gsx$id.$t)
-            .then(res => res.json())
-            .then(showDetails);
-    });
 }
 
 //adding modal
@@ -87,11 +86,9 @@ function showDetails(data) {
     console.log(data)
     modal.querySelector(".modal-name").textContent = data.gsx$name.$t;
     modal.querySelector(".modal-region").textContent = data.gsx$region.$t;
-    modal.querySelector(".modal-address").textContent = data.gsx$address.$t;
     modal.querySelector(".modal-description").textContent = data.gsx$text.$t;
-    modal.querySelector(".modal-activities").textContent = data.gsx$activities.$t;
-    modal.querySelector(".modal-price").textContent = data.gsx$price.$t + " DKK";
-    modal.querySelector(".modal-website").textContent = data.gsx$website.$t;
+    modal.querySelector(".modal-activities").textContent = "ACTIVITIES: " + data.gsx$activities.$t;
+    modal.querySelector(".modal-price").textContent = "FEE: " + data.gsx$price.$t + " DKK";
     modal.classList.remove("hide");
 }
 
