@@ -67,6 +67,31 @@ function showData(singleRowData) {
   h4.textContent = singleRowData.gsx$address.$t;
     const img = clone.querySelector(".product_img");
     img.setAttribute("src", `http://emproductions.dk/imgs/image/${singleRowData.gsx$image.$t}.jpg`);
+
+    if (singleRowData.gsx$beach.$t) {
+       console.log("beach"); clone.querySelector(".beach").classList.remove("hidden");
+    }
+
+    if (singleRowData.gsx$forest.$t) {
+       console.log("forest"); clone.querySelector(".forest").classList.remove("hidden");
+    }
+
+     if (singleRowData.gsx$priceclass.$t) {
+       console.log("price-class"); clone.querySelector(".price-class").classList.remove("hidden");
+    }
+
+    if (singleRowData.gsx$caravan.$t) {
+       console.log("caravan"); clone.querySelector(".caravan").classList.remove("hidden");
+    }
+
+    if (singleRowData.gsx$tent.$t) {
+       console.log("tent"); clone.querySelector(".tent").classList.remove("hidden");
+    }
+
+    if (singleRowData.gsx$cabin.$t) {
+       console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
+    }
+
   //document.querySelector("main").appendChild(clone);
   document
     .querySelector(`section#${singleRowData.gsx$region.$t}`)
