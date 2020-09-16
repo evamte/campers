@@ -146,6 +146,23 @@ header {
     cursor: pointer;
 }
 
+.button-3 {
+    padding: 0.5rem 2rem;
+    border-radius: 1.3rem;
+    color: white;
+    background-color: var(--colour-2);
+    border: none;
+    font-size: 1.2em;
+    font-family: 'Amatic SC';
+    letter-spacing: 0.15rem;
+}
+
+.button-3:hover {
+    background-color: whitesmoke;
+    color: var(--colour-2);
+    cursor: pointer;
+}
+
 button:active {
     text-decoration: none;
 }
@@ -166,7 +183,39 @@ footer {
     width: 100%;
     height: 25em;
     object-fit: cover;
-
-
 }
+}
+
+/*MODAL*/
+
+.hide {
+  display: none;
+}
+
+.modal-background {
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 00;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: var(--colour-3);
+    color: var(--colour-5);
+    border-radius: 2em;
+    margin: 2em;
+    padding: 2em;
+}
+
+.modal-content > h4 {
+    font-family: 'Amatic SC';
+    font-size: 1.5rem;
+    color: var(--colour-2)
+}
+
+.modal-content > p {
+    font-size: 0.9em;
 }
