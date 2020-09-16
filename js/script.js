@@ -78,6 +78,19 @@ function showData(singleRowData) {
        console.log("forest"); clone.querySelector(".forest").classList.remove("hidden");
     }
 
+        if (singleRowData.gsx$priceclass.$t==3) {
+       console.log("price class 3"); clone.querySelector(".three-dollar").classList.remove("hidden");
+    }
+
+            if (singleRowData.gsx$priceclass.$t==2) {
+       console.log("price class 2"); clone.querySelector(".two-dollar").classList.remove("hidden");
+    }
+
+                if (singleRowData.gsx$priceclass.$t==1) {
+       console.log("price class 1"); clone.querySelector(".one-dollar").classList.remove("hidden");
+    }
+
+
 
     // ACCOMMODATION ICONS
 
