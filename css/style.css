@@ -158,6 +158,37 @@ button:active {
     height: 14rem;
 }
 
+/*RENTALS*/
+h5 {
+    font-family: 'Oswald', sans-serif;
+    color: #C85100;
+    font-size: 1.2em;
+    line-height: 0;
+}
+
+.accommodation {
+    display: flex;
+    justify-content: space-around;
+    align-self: center;
+}
+
+.accommodation img {
+    text-align: left;
+    max-width: 1.8em;
+    height: auto;
+    display: inline-flex;
+}
+
+/*ICONS*/
+.icons img {
+    text-align: left;
+    max-width: 2.5em;
+    height: auto;
+    display: inline-flex;
+    margin-top: 2em;
+    padding: 10px;
+}
+
 
 /*FOOTER*/
 
@@ -178,4 +209,8 @@ footer {
 
 
 }
+}
+
+img.hidden, .hidden {
+    display: none;
 }
