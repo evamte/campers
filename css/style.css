@@ -150,6 +150,15 @@ button:active {
     text-decoration: none;
 }
 
+
+/*PRODUCT IMAGES*/
+.product_img {
+    border-radius: 10px;
+    background-size: 100%;
+    height: 14rem;
+}
+
+
 /*FOOTER*/
 
 footer {

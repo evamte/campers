@@ -65,6 +65,8 @@ function showData(singleRowData) {
   h3.textContent = singleRowData.gsx$name.$t;
   const h4 = clone.querySelector("h4");
   h4.textContent = singleRowData.gsx$address.$t;
+    const img = clone.querySelector(".product_img");
+    img.setAttribute("src", `http://emproductions.dk/imgs/image/${singleRowData.gsx$image.$t}.jpg`);
   //document.querySelector("main").appendChild(clone);
   document
     .querySelector(`section#${singleRowData.gsx$region.$t}`)
