@@ -59,38 +59,39 @@ main > section {
 /*FONTS*/
 h1 {
     font-family: 'Amatic SC';
-    font-size: 350%;
+    font-size: 450%;
     line-height: 0;
 }
 
 h2 {
-    font-family: 'Amatic SC';
-    font-size: 250%;
+    font-family: 'Oswald';
+    font-size: 150%;
+    font-weight: 200;
 }
 
 h3 {
     font-family: 'Oswald', sans-serif;
-    font-weight: 100;
-    font-size: 1.4em;
+    font-weight: 400;
+    font-size: 125%;
 }
 
 h4 {
     font-family: 'Oswald', sans-serif;
     font-weight: 100;
-    font-size: 1em;
+    font-size: 1.2em;
 }
 
 h5 {
     font-family: 'Oswald', sans-serif;
     color: #C85100;
-    font-size: 1em;
-    line-height: 0;
+    font-size: 1.2em;
+    line-height: 1.2em;
 }
 
 p {
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Oswald';
     font-weight: 100;
-    font-size: 1em;
+    font-size: 1.4em;
 }
 
 /*NAV AND HEADER*/
@@ -151,9 +152,15 @@ header {
     text-decoration: none;
 }
 
-.slogan {
+.slogan, .title {
+    text-align: center;
     color: white;
 }
+
+.slogan {
+    padding-bottom: 6em;
+}
+
 
 /*BUTTON STYLING*/
 
@@ -210,9 +217,6 @@ header {
     cursor: pointer;
 }
 
-button:active {
-    text-decoration: none;
-}
 
 
 /*PRODUCT IMAGES*/
@@ -257,14 +261,6 @@ button:active {
     padding: 10px;
 }
 
-
-/*FOOTER*/
-
-footer {
-    background-color: beige;
-    height: 2vw;
-}
-
 /*MEDIA QUERIES*/
 
 @media only screen and (max-width: 600px) {
@@ -279,6 +275,15 @@ footer {
     #logo img {
         max-width: 5em;
     }
+
+    .slogan {
+    padding-bottom: 0em;
+}
+
+.title {
+    font-size: 3em
+}
+
 
     .button-1 {
         padding: 0.8em;
@@ -372,4 +377,33 @@ summary {
     border-radius: 3rem;
     font-size: 1em;
     cursor: pointer;
+}
+
+/*FOOTER*/
+
+footer {
+    background-color: var(--colour-1);
+    height: 15em;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+#sm-wrapper img {
+    max-height: 3em;
+    padding: 0 1em 2em 1em;
+}
+
+#sm-wrapper img:hover {
+    cursor: pointer;
+    opacity: 75%;
+
+}
+
+#sm-wrapper, footer h3  {
+    justify-self: center;
+    align-self: center;
+}
+
+footer h3 {
+    color: white;
 }
