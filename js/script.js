@@ -129,7 +129,7 @@ function showDetails(data) {
     modal.querySelector(".modal-region").textContent = data.gsx$region.$t;
     modal.querySelector(".modal-description").textContent = data.gsx$text.$t;
     modal.querySelector(".modal-activities").textContent = "ACTIVITIES: " + data.gsx$activities.$t;
-    modal.querySelector(".modal-price").textContent = "FEE (p.p/ per night: " + data.gsx$price.$t + " DKK";
+    modal.querySelector(".modal-price").textContent = "FEE (person/night) : " + data.gsx$price.$t + " DKK";
     modal.classList.remove("hide");
 }
 
