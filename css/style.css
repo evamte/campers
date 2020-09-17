@@ -1,6 +1,6 @@
 /*TO DO:
-- Style footer with Social Media Icons
-- Search icon
+- Style footer with Social Media Icons - DONE
+- Search icon prototype
 - filters - DONE
 - link campwebsites to modal - DONE
 - price classes - DONE
@@ -65,14 +65,14 @@ h1 {
 
 h2 {
     font-family: 'Oswald';
-    font-size: 150%;
-    font-weight: 200;
+    font-size: 175%;
+    font-weight: 300;
 }
 
 h3 {
     font-family: 'Oswald', sans-serif;
     font-weight: 400;
-    font-size: 125%;
+    font-size: 1.4em;
 }
 
 h4 {
@@ -84,14 +84,14 @@ h4 {
 h5 {
     font-family: 'Oswald', sans-serif;
     color: #C85100;
-    font-size: 1.2em;
+    font-size: 1.1em;
     line-height: 1.2em;
 }
 
 p {
     font-family: 'Oswald';
     font-weight: 100;
-    font-size: 1.4em;
+    font-size: 1.1em;
 }
 
 /*NAV AND HEADER*/
