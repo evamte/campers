@@ -4,6 +4,7 @@ window.addEventListener("DOMContentLoaded", getData);
 
 //init=getData
 //data=handleData
+
 function getData() {
     fetch(link)
         .then((res) => res.json())
@@ -71,40 +72,51 @@ function showData(singleRowData) {
     img.setAttribute("src", `http://emproductions.dk/imgs/image/${singleRowData.gsx$image.$t}.jpg`);
 
     if (singleRowData.gsx$beach.$t) {
-       console.log("beach"); clone.querySelector(".beach").classList.remove("hidden");
+        clone.querySelector('article').classList.add('beach')
+    }
+    if (singleRowData.gsx$forest.$t) {
+        clone.querySelector('article').classList.add('forest')
+    }
+    if (singleRowData.gsx$beach.$t) {
+        console.log("beach");
+        clone.querySelector("article .beach").classList.remove("hidden");
     }
 
     if (singleRowData.gsx$forest.$t) {
-       console.log("forest"); clone.querySelector(".forest").classList.remove("hidden");
+        console.log("forest");
+        clone.querySelector("article .forest").classList.remove("hidden");
     }
 
-        if (singleRowData.gsx$priceclass.$t==3) {
-       console.log("price class 3"); clone.querySelector(".three-dollar").classList.remove("hidden");
+    if (singleRowData.gsx$priceclass.$t == 3) {
+        console.log("price class 3");
+        clone.querySelector(".three-dollar").classList.remove("hidden");
     }
 
-            if (singleRowData.gsx$priceclass.$t==2) {
-       console.log("price class 2"); clone.querySelector(".two-dollar").classList.remove("hidden");
+    if (singleRowData.gsx$priceclass.$t == 2) {
+        console.log("price class 2");
+        clone.querySelector(".two-dollar").classList.remove("hidden");
     }
 
-                if (singleRowData.gsx$priceclass.$t==1) {
-       console.log("price class 1"); clone.querySelector(".one-dollar").classList.remove("hidden");
+    if (singleRowData.gsx$priceclass.$t == 1) {
+        console.log("price class 1");
+        clone.querySelector(".one-dollar").classList.remove("hidden");
     }
 
 
 
-    // ACCOMMODATION ICONS
+    // ACCOMMODATION ICONS?
 
-    //if (singleRowData.gsx$caravan.$t) {
-       //console.log("caravan"); clone.querySelector(".caravan").classList.remove("hidden");
-    //}
+    /*if (singleRowData.gsx$caravan.$t) {
+    console.log("caravan"); clone.querySelector(".caravan").classList.remove("hidden");
+    }
 
-    //if (singleRowData.gsx$tent.$t) {
-       //console.log("tent"); clone.querySelector(".tent").classList.remove("hidden");
-    //}
+    if (singleRowData.gsx$tent.$t) {
+    console.log("tent"); clone.querySelector(".tent").classList.remove("hidden");
+    }
 
-    //if (singleRowData.gsx$cabin.$t) {
-       //console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
-    //}
+    if (singleRowData.gsx$cabin.$t) {
+    console.log("cabin"); clone.querySelector(".cabin").classList.remove("hidden");
+    }*/
 
 
     //adding click event
@@ -114,6 +126,7 @@ function showData(singleRowData) {
     });
 
     //document.querySelector("main").appendChild(clone);
+
     document
         .querySelector(`section#${singleRowData.gsx$region.$t}`)
         .appendChild(clone);
@@ -130,7 +143,39 @@ function showDetails(data) {
     modal.querySelector(".modal-description").textContent = data.gsx$text.$t;
     modal.querySelector(".modal-activities").textContent = "ACTIVITIES: " + data.gsx$activities.$t;
     modal.querySelector(".modal-price").textContent = "FEE (person/night) : " + data.gsx$price.$t + " DKK";
+    modal.querySelector('a').href = data.gsx$website.$t
     modal.classList.remove("hide");
+
+}
+
+//adding filters
+
+const beachfilter = document.querySelector("#beachfilter");
+beachfilter.addEventListener("click", beachfilterClicked);
+
+function beachfilterClicked() {
+    let articles = document.querySelectorAll("article");
+    articles.forEach(elem => {
+        elem.classList.add("hidden")
+    })
+    articles = document.querySelectorAll("article.beach");
+    articles.forEach(elem => {
+        elem.classList.remove("hidden")
+    })
+}
+
+const forestfilter = document.querySelector("#forestfilter");
+forestfilter.addEventListener("click", forestfilterClicked);
+
+function forestfilterClicked() {
+    let articles = document.querySelectorAll("article");
+    articles.forEach(elem => {
+        elem.classList.add("hidden")
+    })
+    articles = document.querySelectorAll("article.forest");
+    articles.forEach(elem => {
+        elem.classList.remove("hidden")
+    })
 }
 
 modal.addEventListener("click", () => {

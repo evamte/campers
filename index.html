@@ -15,14 +15,19 @@
 <body>
     <div id="header-nav-wrapper">
         <img class="header-bg" src="img/campfire.jpg" alt="">
-                   <a href=# id="logo">
-                <img src="img/white-logo.svg">
-            </a>
+        <a href=# id="logo">
+            <img src="img/white-logo.svg">
+        </a>
         <nav></nav>
         <header>
             <h2 class="slogan">Find your Perfect Camping Spot</h2>
             <button class="button-1">Explore Campsites</button>
         </header>
+        <details>
+            <summary>Details</summary>
+            <button id="beachfilter">Beach</button>
+            <button id="forestfilter">Forest</button>
+        </details>
     </div>
     <main class="productlist">
         <template id="productTemplate">
@@ -33,7 +38,7 @@
                         <img class="beach hidden" src="img/beach.svg">
                         <img class="forest hidden" src="img/forest.svg">
                         <img class="one-dollar hidden" src="img/one-dollar.svg">
-                         <img class="two-dollar hidden" src="img/two-dollar.svg">
+                        <img class="two-dollar hidden" src="img/two-dollar.svg">
                         <img class="three-dollar hidden" src="img/three-dollar.svg">
                     </div>
                     <h3 class="name"></h3>
@@ -53,7 +58,8 @@
             <p class="modal-description">Long Description</p>
             <p class="modal-activities">Activities</p>
             <p class="modal-price">Price</p>
-            <button class="button-3">Visit</button>
+            <br />
+            <a class="button-3">Visit</a>
         </div>
     </div>
 
